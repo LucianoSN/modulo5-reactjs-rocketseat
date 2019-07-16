@@ -4,7 +4,8 @@ import { FaGithubAlt, FaPlus, FaSpinner } from 'react-icons/fa';
 
 import api from '../../services/api';
 
-import { Container, Form, SubmitButton, List } from './styles';
+import Container from '../../components/Container';
+import { Form, SubmitButton, List } from './styles';
 
 export default class Main extends Component {
 	state = {
@@ -70,7 +71,7 @@ export default class Main extends Component {
 						onChange={this.handleInputChange}
 					/>
 
-					<SubmitButton loading={loading}>
+					<SubmitButton load={loading}>
 						{loading ? (
 							<FaSpinner color="#FFF" size={14} />
 						) : (
